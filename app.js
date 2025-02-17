@@ -20,9 +20,3 @@ chokidar.watch(saboresPath).on("change", (path) => {
   console.log(`Archivo de sabores modificado: ${path}`)
   ctrlGustos.actualizarSaboresDesdeArchivo()
 })
-
-const PORT = process.env.PORT || 3000
-http.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`)
-  ctrlGustos.actualizarSaboresDesdeArchivo()
-})
